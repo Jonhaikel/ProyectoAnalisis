@@ -77,7 +77,7 @@
                     Teléfono                   
                 </td>
                 <td>
-                     <asp:TextBox ID="TbTelefono" runat="server" Width="300px" CssClass="auto-style2" TextMode="Number"></asp:TextBox>
+                     <asp:TextBox ID="TbTelefono" runat="server" Width="300px" CssClass="auto-style2" TextMode="Phone"></asp:TextBox>
                 </td>
             </tr>
             <tr>
