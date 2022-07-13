@@ -13,5 +13,11 @@ namespace Proyecto.Inicio
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int number = 0;
+
+        }
     }
 }
