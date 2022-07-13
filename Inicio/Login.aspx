@@ -20,7 +20,6 @@
         <h1>Iniciar de Sesión</h1>
               <p class="auto-style3">
                   <label for="Correo" class="" style="padding-right: 45px;">Correo:</label><asp:TextBox ID="TextBox1" runat="server" Width="212px"></asp:TextBox>
-&nbsp;
               </p>
               <p class="auto-style3">
                   <label for="Contraseña" class="" style="padding-right: 15px;">Contraseña:</label>&nbsp;
