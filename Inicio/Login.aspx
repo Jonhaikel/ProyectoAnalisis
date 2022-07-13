@@ -27,7 +27,7 @@
                   <asp:TextBox ID="TextBox2" runat="server" Width="220px"></asp:TextBox>
               </p>              
               <p style="margin-top: 25px;" class="auto-style3">
-                  &nbsp;<asp:Button ID="Button1" runat="server" Height="26px" Text="Ingresar" Width="102px" />
+                  &nbsp;<asp:Button ID="Button1" runat="server" Height="26px" Text="Ingresar" Width="102px" OnClick="Button1_Click" />
               </p>
               <p class="auto-style3">No tienes cuenta?<a class="link" href="Re.html">Registrarse</a></p>
           </form>
