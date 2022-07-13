@@ -68,7 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
+    <Content Include="Imagenes\fondo asp.net.jpg" />
+    <Content Include="Imagenes\icono.png" />
+    <Content Include="Imagenes\panel.jpg" />
     <Content Include="Inicio\Login.aspx" />
+    <Content Include="Inicio\login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

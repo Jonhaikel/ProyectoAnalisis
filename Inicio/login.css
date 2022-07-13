@@ -1,0 +1,26 @@
+﻿body {
+    background: url('../Imagenes/fondo asp.net.jpg');
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+form {
+    background: #e6e6fa;
+    padding: 4em 4em 2em;
+    max-width: 400px;
+    margin: 50px auto 0;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #128c7e;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.p {
+    font-size: 20px;
+}
