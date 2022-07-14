@@ -14,7 +14,12 @@ namespace Proyecto.Admin_Jefe
 
         }
 
-        protected System.Void Button1_Click(System.Object sender, System.EventArgs e)
+        protected void Button1_Click(System.Object sender, System.EventArgs e)
+        {
+
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
 
         }

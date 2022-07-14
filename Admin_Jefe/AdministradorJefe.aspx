@@ -57,7 +57,7 @@
                         &nbsp; Nombre solicitante&nbsp;&nbsp;
                         <asp:TextBox ID="txtDescripcion" runat="server" Width="208px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp; <strong>
-                        <asp:Button ID="btnBuscar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Buscar" Width="83px" />
+                        <asp:Button ID="btnBuscar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Buscar" Width="83px" OnClick="btnBuscar_Click" />
                         </strong></td>
                 </tr>
                 <tr>
