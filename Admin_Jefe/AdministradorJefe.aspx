@@ -86,9 +86,9 @@
                 <tr>
                     <td class="auto-style10" colspan="2"><strong>
                         <br />
-                        <asp:Button ID="btnRechazar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Rechazar" Width="83px" />
+                        <asp:Button ID="btnRechazar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Rechazar" Width="83px" OnClick="btnRechazar_Click" />
                         &nbsp;&nbsp;
-                        <asp:Button ID="btnAceptar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Aceptar" Width="83px" />
+                        <asp:Button ID="btnAceptar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Aceptar" Width="83px" OnClick="btnAceptar_Click" />
                         </strong>
                         <br />
                         <br />

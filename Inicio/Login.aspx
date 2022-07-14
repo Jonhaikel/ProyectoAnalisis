@@ -19,11 +19,11 @@
         <form id="form1" runat="server">
         <h1>Iniciar de Sesión</h1>
               <p class="auto-style3">
-                  <label for="Correo" class="" style="padding-right: 45px;">Correo:</label><asp:TextBox ID="TextBox1" runat="server" Width="212px"></asp:TextBox>
+                  <label for="Correo" class="" style="padding-right: 45px;">Correo:</label><asp:TextBox ID="txtUsuario" runat="server" Width="212px"></asp:TextBox>
               </p>
               <p class="auto-style3">
                   <label for="Contraseña" class="" style="padding-right: 15px;">Contraseña:</label>&nbsp;
-                  <asp:TextBox ID="TextBox2" runat="server" Width="220px"></asp:TextBox>
+                  <asp:TextBox ID="txtClave" runat="server" Width="220px"></asp:TextBox>
               </p>              
               <p style="margin-top: 25px;" class="auto-style3">
                   &nbsp;<asp:Button ID="Button1" runat="server" Height="26px" Text="Ingresar" Width="102px" OnClick="Button1_Click" />
