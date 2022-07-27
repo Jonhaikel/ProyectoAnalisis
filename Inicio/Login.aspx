@@ -7,12 +7,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Login</title>
     <link href ="login.css" rel ="stylesheet" />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <style type="text/css">
         .auto-style3 {
             text-align: center;
         }
+        .auto-style4 {
+            width: 41px;
+            margin-left: 520px;
+        }
     </style>
+
+    <script>
+        function alertme() {
+            swal.fire(
+                'Contrasena incorrecta',
+                '',
+                'warning'
+            )
+        }
+
+        function alertme2() {
+            swal.fire(
+                'Usuario Bloqueado',
+                '',
+                'warning'
+            )
+        }
+
+        function alertme3() {
+            swal.fire(
+                'Usuario Bloqueado contacte a su administrador',
+                '',
+                'warning'
+            )
+        }
+
+
+    </script>
 
 </head>
 <body>
@@ -29,7 +61,13 @@
                   &nbsp;<asp:Button ID="Button1" runat="server" Height="26px" Text="Ingresar" Width="102px" OnClick="Button1_Click" />
               </p>
               <p class="auto-style3">No tienes cuenta?<a class="link" href="Re.html">Registrarse</a></p>
+            <div class="auto-style4">
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div>
           </form>
+
+        <p>
+            &nbsp;</p>
 
 </body>
 </html>

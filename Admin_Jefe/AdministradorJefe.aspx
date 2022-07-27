@@ -56,9 +56,7 @@
                         <asp:TextBox ID="txtQueja" runat="server" Width="208px"></asp:TextBox>
                         &nbsp; Nombre solicitante&nbsp;&nbsp;
                         <asp:TextBox ID="txtDescripcion" runat="server" Width="208px"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp; <strong>
-                        <asp:Button ID="btnBuscar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Buscar" Width="83px" OnClick="btnBuscar_Click" />
-                        </strong></td>
+                        &nbsp;&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
                     <td class="auto-style15" colspan="2">
@@ -86,9 +84,7 @@
                 <tr>
                     <td class="auto-style10" colspan="2"><strong>
                         <br />
-                        <asp:Button ID="btnRechazar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Rechazar" Width="83px" OnClick="btnRechazar_Click" />
                         &nbsp;&nbsp;
-                        <asp:Button ID="btnAceptar" runat="server" BackColor="#42AA55" CssClass="auto-style11" ForeColor="White" Height="36px" Text="Aceptar" Width="83px" OnClick="btnAceptar_Click" />
                         </strong>
                         <br />
                         <br />
