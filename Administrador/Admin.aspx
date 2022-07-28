@@ -1,4 +1,5 @@
-﻿
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="Proyecto.Admin" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,10 +15,7 @@
         .auto-style4 {
             width: 100px;
         }
-         .auto-style5 {
-            width: 500px;
-        }
-        table {
+         table {
            margin: 0 auto;
         }
         </style>
@@ -39,7 +37,7 @@
                 </td>
                 <td rowspan="10" class="auto-style4">
 
-                    <asp:Button ID="Button1" runat="server" Text="Registro" Width="105px" />
+                    <asp:Button ID="Button3" runat="server" Text="Ingresar" OnClick="Button3_Click" Width="107px" />
 
                     <br />
                     <br />
@@ -126,4 +124,3 @@
     </form>
     </body>
 </html>
- 

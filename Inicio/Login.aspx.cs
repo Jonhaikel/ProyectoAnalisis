@@ -68,9 +68,10 @@ namespace Proyecto.Inicio
                         
                         if (dt.Rows[0][1].ToString() == "1")
                         {
+
+                            Response.Redirect("/Admin_Jefe/AdministradorJefe.aspx");
                             
-                            
-                        }
+                    }
                         if (dt.Rows[0][1].ToString() == "2")
                         {
                             

@@ -43,6 +43,14 @@
             )
         }
 
+        function alertme4() {
+            swal.fire(
+                'Bienvenido al sistema',
+                '',
+                'success'
+            )
+        }
+
 
     </script>
 
