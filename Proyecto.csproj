@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,6 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administrador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Negocio\Negocio.csproj">
+      <Project>{a59f1dcd-314d-4838-b925-ba2c5f04219c}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
