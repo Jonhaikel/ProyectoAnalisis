@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
+    <Content Include="Comprador\Comprador.css" />
+    <Content Include="Comprador\Default.aspx" />
     <Content Include="Imagenes\fondo asp.net.jpg" />
     <Content Include="Imagenes\icono.png" />
     <Content Include="Imagenes\panel.jpg" />
@@ -90,6 +92,13 @@
     </Compile>
     <Compile Include="Admin_Jefe\AdministradorJefe.aspx.designer.cs">
       <DependentUpon>AdministradorJefe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comprador\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprador\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
