@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\Admin.aspx" />
+    <Content Include="Administrador\menuAdminaspx.aspx" />
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
     <Content Include="Comprador\Comprador.css" />
     <Content Include="Comprador\Default.aspx" />
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Administrador\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\menuAdminaspx.aspx.cs">
+      <DependentUpon>menuAdminaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\menuAdminaspx.aspx.designer.cs">
+      <DependentUpon>menuAdminaspx.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Jefe\AdministradorJefe.aspx.cs">
       <DependentUpon>AdministradorJefe.aspx</DependentUpon>
