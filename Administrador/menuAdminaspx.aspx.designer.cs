@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto
+namespace Proyecto.Administrador
 {
 
 
-    public partial class Admin
+    public partial class menuAdminaspx
     {
 
         /// <summary>
@@ -24,111 +24,84 @@ namespace Proyecto
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Btingresar control.
+        /// LbUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btingresar;
+        protected global::System.Web.UI.WebControls.Label LbUsuario;
 
         /// <summary>
-        /// BtLimpiar control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtLimpiar;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// BtVolver control.
+        /// Btbuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtVolver;
+        protected global::System.Web.UI.WebControls.Button Btbuscar;
 
         /// <summary>
-        /// tbId control.
+        /// intUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbId;
+        protected global::System.Web.UI.WebControls.Button intUsuario;
 
         /// <summary>
-        /// tbCedula control.
+        /// RBcomprador control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbCedula;
+        protected global::System.Web.UI.WebControls.RadioButton RBcomprador;
 
         /// <summary>
-        /// TbNombre control.
+        /// RBaprovadorJefe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbNombre;
+        protected global::System.Web.UI.WebControls.RadioButton RBaprovadorJefe;
 
         /// <summary>
-        /// TbApellido control.
+        /// RBaprovadorFinanciero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbApellido;
+        protected global::System.Web.UI.WebControls.RadioButton RBaprovadorFinanciero;
 
         /// <summary>
-        /// TbTelefono control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbTelefono;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// TbDireccion control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbDireccion;
-
-        /// <summary>
-        /// TbCorreo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbCorreo;
-
-        /// <summary>
-        /// Tbclave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Tbclave;
-
-        /// <summary>
-        /// TbJefe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbJefe;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

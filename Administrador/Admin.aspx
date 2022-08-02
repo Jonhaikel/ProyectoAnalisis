@@ -18,7 +18,20 @@
          table {
            margin: 0 auto;
         }
+        body {
+            background-color: #F8C471 ;
+        }
+        
+        .auto-style5 {
+            width: 100px;
+            height: 33px;
+        }
+        .auto-style6 {
+            height: 33px;
+        }
+        
         </style>
+    
  
 </head>
 
@@ -37,13 +50,26 @@
                 </td>
                 <td rowspan="10" class="auto-style4">
 
-                    <asp:Button ID="Button3" runat="server" Text="Ingresar" OnClick="Button3_Click" Width="107px" />
+                    <asp:Button ID="Btingresar" runat="server" Text="Ingresar" OnClick="Button3_Click" Width="107px" />
 
                     <br />
                     <br />
 
-                    <asp:Button ID="Button2" runat="server" Text="Limpiar" Width="105px" />
+                    <asp:Button ID="BtLimpiar" runat="server" Text="Limpiar" Width="105px" OnClick="BtLimpiar_Click" />
 
+                </td>
+                <td>
+
+                    <asp:Button ID="BtVolver" runat="server" OnClick="BtVolver_Click" Text="Volver" />
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Id Usuario
+                </td>
+                <td>
+                     <asp:TextBox ID="tbId" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>  
@@ -51,7 +77,7 @@
                     Cedula                
                 </td>
                 <td>
-                     <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
+                     <asp:TextBox ID="tbCedula" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -94,19 +120,12 @@
                       <asp:TextBox ID="TbCorreo" runat="server" Width="300px" TextMode="Email"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td class="auto-style4">
-                    Rol                   
-                </td>
-                <td>
-                     <asp:TextBox ID="TbRol" runat="server" Width="300px"></asp:TextBox>
-                </td>
-            </tr>
+            
             <tr>                 
-                <td class="auto-style4">
+                <td class="auto-style5">
                     Clave                    
                 </td>
-                <td>
+                <td class="auto-style6">
                     <asp:TextBox ID="Tbclave" runat="server" Width="300px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
@@ -117,6 +136,7 @@
                     <asp:TextBox ID="TbJefe" runat="server" Width="300px"></asp:TextBox>
                 </td>    
             </tr>
+           
            
         </table>
     <p style="text-align: center">
