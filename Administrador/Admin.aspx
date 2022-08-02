@@ -18,7 +18,20 @@
          table {
            margin: 0 auto;
         }
+        body {
+            background-color: #F8C471 ;
+        }
+        
+        .auto-style5 {
+            width: 100px;
+            height: 33px;
+        }
+        .auto-style6 {
+            height: 33px;
+        }
+        
         </style>
+    
  
 </head>
 
@@ -109,10 +122,10 @@
             </tr>
             
             <tr>                 
-                <td class="auto-style4">
+                <td class="auto-style5">
                     Clave                    
                 </td>
-                <td>
+                <td class="auto-style6">
                     <asp:TextBox ID="Tbclave" runat="server" Width="300px" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>

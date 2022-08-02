@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Data;
 
 namespace Proyecto.Administrador
 {
@@ -15,13 +17,11 @@ namespace Proyecto.Administrador
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (cone().StatisticsEnabled) {
-                MessageBox.Show("base de datos");
-            }
+
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void intUsuario_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Administrador/Admin.aspx");
         }
@@ -56,7 +56,7 @@ namespace Proyecto.Administrador
 
                 if (msj == true)
                 {
-                    MessageBox.Show("hola");
+                    MessageBox.Show("proce");
 
                 }
             }
@@ -65,6 +65,12 @@ namespace Proyecto.Administrador
                 MessageBox.Show("Falta Informacion ", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
+        }
+        protected void Btbuscar_Click(object sender, EventArgs e)
+        {
+
+            LbUsuario.Text = searchUser(TextBox1.Text);
+
         }
 
         //metodos usados 
@@ -112,9 +118,42 @@ namespace Proyecto.Administrador
             }
             return tipo_U;
         }
-        public SqlConnection cone()
+        public string searchUser(String User)
         {
-            const string ConnectionString = "Data Source=DESKTOP-3HTE7QQ\\SQLEXPRESS;Initial Catalog = AnalisisYDisenoPrueba ;Integrated Security=True";
+            string user = "";
+            string userA = "";
+            string sql = "";
+            string sql2 = "";
+
+            if (User.All(char.IsDigit))
+            {
+                sql = "select Nombre from tbl_Usuario where idUsuario =" + User;
+                sql2 = "select Apellidos from tbl_Usuario where idUsuario =" + User;
+            }
+            else 
+            {
+                sql = "select Nombre from tbl_Usuario where Nombre ='" + User + "'";
+                sql2 = "select Apellidos from tbl_Usuario where Nombre ='" + User+"'";
+            }  
+            SqlCommand command = new SqlCommand(sql, cone());
+            user = Convert.ToString(command.ExecuteScalar());
+
+            command= new SqlCommand(sql2, cone());
+            userA = Convert.ToString(command.ExecuteScalar());
+            
+            if (user.Length == 0)
+            {
+                user = "No existe nadie";
+            }
+            user = user + " " + userA;
+
+            return user;
+
+
+        }
+        private SqlConnection cone()
+        {
+            const string ConnectionString = "Data Source=DESKTOP-3HTE7QQ\\SQLEXPRESS;Initial Catalog= AnalisisYDisenoPrueba;Integrated Security=True";
             SqlConnection con = new SqlConnection
             (ConnectionString);
             try
@@ -131,5 +170,7 @@ namespace Proyecto.Administrador
 
             return con;
         }
+
+
     }
 }

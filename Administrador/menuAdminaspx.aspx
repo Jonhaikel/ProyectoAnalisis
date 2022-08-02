@@ -20,10 +20,7 @@
             height: 45px;
         }
 
-        .auto-style4 {
-            width: 393px;
-            height: 45px;
-        }
+       
 
         .auto-style5 {
             height: 45px;
@@ -39,6 +36,10 @@
         .auto-style7 {
             text-align: center;
         }
+        body {
+            background-color: #F8C471;
+        }
+        
     </style>
 </head>
 <body style="width: 1027px">
@@ -51,16 +52,16 @@
                     <td class="auto-style3">
                         <asp:Label ID="LbUsuario" runat="server"></asp:Label>
                     </td>
-                    <td class="auto-style4">
+                    <td>
                         <asp:TextBox ID="TextBox1" runat="server" Width="257px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Btbuscar" runat="server" Text="Buscar" />
+                <asp:Button ID="Btbuscar" runat="server" Text="Buscar" OnClick="Btbuscar_Click" />
                     </td>
                     <td class="auto-style5"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
-                        <asp:Button ID="IntUser" runat="server" Height="102px" OnClick="Button1_Click" Text="Insertar Usuario" Width="187px" />
+                    <td>
+                        <asp:Button ID="intUsuario" runat="server" Height="87px" OnClick="intUsuario_Click" Text="Insertar usuario" Width="150px" />
                         <br />
                         <br />
                     </td>
@@ -85,8 +86,8 @@
                 </tr>
             </table>
         </div>
-    </form>
     <p class="auto-style7">
         &nbsp;</p>
-</body>
+    </form>
+    </body>
 </html>

@@ -51,13 +51,13 @@ namespace Proyecto.Administrador
         protected global::System.Web.UI.WebControls.Button Btbuscar;
 
         /// <summary>
-        /// IntUser control.
+        /// intUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button IntUser;
+        protected global::System.Web.UI.WebControls.Button intUsuario;
 
         /// <summary>
         /// RBcomprador control.
