@@ -71,7 +71,13 @@
     <Content Include="Administrador\Admin.aspx" />
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
     <Content Include="Comprador\Comprador.css" />
+    <Content Include="Comprador\Configuraciones.aspx" />
     <Content Include="Comprador\Default.aspx" />
+    <Content Include="Comprador\informe.aspx" />
+    <Content Include="Comprador\menu.html" />
+    <Content Include="Comprador\Soli.aspx" />
+    <Content Include="Comprador\solicitud.css" />
+    <Content Include="Default.html" />
     <Content Include="Imagenes\fondo asp.net.jpg" />
     <Content Include="Imagenes\icono.png" />
     <Content Include="Imagenes\panel.jpg" />
@@ -94,12 +100,33 @@
     <Compile Include="Admin_Jefe\AdministradorJefe.aspx.designer.cs">
       <DependentUpon>AdministradorJefe.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Comprador\Configuraciones.aspx.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprador\Configuraciones.aspx.designer.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Comprador\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Comprador\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comprador\informe.aspx.cs">
+      <DependentUpon>informe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprador\informe.aspx.designer.cs">
+      <DependentUpon>informe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comprador\Soli.aspx.cs">
+      <DependentUpon>Soli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprador\Soli.aspx.designer.cs">
+      <DependentUpon>Soli.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
