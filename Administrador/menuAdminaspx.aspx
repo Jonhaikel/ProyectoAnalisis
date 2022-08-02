@@ -78,10 +78,10 @@
                 <tr>
                     <td class="auto-style1">&nbsp;</td>
                     <td class="auto-style2">
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Agregar" />
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Agregar" Enabled="False" />
                     </td>
                     <td>
-                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Inactivar" />
+                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Inactivar" Enabled="False" />
                     </td>
                 </tr>
             </table>
