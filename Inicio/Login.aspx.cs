@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows;
-using Negocio;
+//using Negocio;
 namespace Proyecto.Inicio
 {
     public partial class Login : System.Web.UI.Page
@@ -103,7 +103,7 @@ namespace Proyecto.Inicio
                         try
                         {
                             string Rpta = "";
-                            Rpta = NUsuario.ActualizarEstadoU(txtUsuario.Text);
+                            //Rpta = NUsuario.ActualizarEstadoU(txtUsuario.Text);
                             if (Rpta.Equals("OK"))
                             {
                                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alertme2()", true);

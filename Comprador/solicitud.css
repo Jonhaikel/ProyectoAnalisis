@@ -1,0 +1,100 @@
+﻿.solis {
+    width: 80%;
+    background: #ffffff;
+    padding: 30px 60px 40px 40px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px;
+    margin-left: 8%;
+    align-content:center;
+}
+
+    .solis .Contenido {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        #solis .Contenido .izquierdo {
+            width: 25%;
+            height: 100%;
+            position: relative;
+        }
+
+.Contenido .izquierdo::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #42dca3;
+}
+
+.izquierdo .Detalle .text1,
+.izquierdo .Detalle .text2 {
+    font-size: 13px;
+    color: rgb(122, 163, 163);
+}
+
+.izquierdo .Detalle {
+    margin: 14px;
+    text-align: center;
+}
+
+    .izquierdo .Detalle i {
+        font-size: 30px;
+        color: #3e2093;
+    }
+
+    .izquierdo .Detalle .topic {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+
+.solis .Contenido .derecho {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.Contenido .derecho .tema {
+    font-size: 25px;
+    font-weight: 600;
+    color: #3e2093;
+}
+
+.derecho .Caja {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+    .derecho .Caja #producto,
+    .derecho .Caja textarea,
+    .derecho .Caja #precio{
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        background: #bbb6b6b4;
+        border-radius: 10px;
+        padding: 0 15px;
+        resize: none;
+    }
+
+.Ctexto {
+    min-height: 140px;
+    margin-top: 6px;
+}
+
+.derecho .btn-solicitud input {
+    color: #ffffff;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 14px;
+    background: #3e2093;
+    cursor: pointer;
+}
