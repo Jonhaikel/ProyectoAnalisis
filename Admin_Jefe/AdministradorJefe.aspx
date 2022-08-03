@@ -52,7 +52,11 @@
                     <td class="auto-style10" colspan="2">Aprobador Financiero</td>
                 </tr>
                 <tr>
-                    <td class="auto-style16" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Id Solicitud&nbsp;
+                    <td class="auto-style16" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem>uno</asp:ListItem>
+                        <asp:ListItem>dos</asp:ListItem>
+                        </asp:DropDownList>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Id Solicitud&nbsp;
                         <asp:TextBox ID="txtQueja" runat="server" Width="208px"></asp:TextBox>
                         &nbsp; Nombre solicitante&nbsp;&nbsp;
                         <asp:TextBox ID="txtDescripcion" runat="server" Width="208px"></asp:TextBox>
