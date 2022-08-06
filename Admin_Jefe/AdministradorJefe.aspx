@@ -57,7 +57,7 @@
                         <asp:ListItem>dos</asp:ListItem>
                         </asp:DropDownList>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Id Solicitud&nbsp;
-                        <asp:TextBox ID="txtQueja" runat="server" Width="208px"></asp:TextBox>
+                        <asp:TextBox ID="txtQueja" runat="server" Width="208px" OnTextChanged="txtQueja_TextChanged"></asp:TextBox>
                         &nbsp; Nombre solicitante&nbsp;&nbsp;
                         <asp:TextBox ID="txtDescripcion" runat="server" Width="208px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp; </td>
