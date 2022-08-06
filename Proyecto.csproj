@@ -72,6 +72,12 @@
     <Content Include="Administrador\menuAdminaspx.aspx" />
     <Content Include="Admin_financiero\admin_finan.aspx" />
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
+    <Content Include="Admin_Jefe\Admin_jefe.css" />
+    <Content Include="Admin_Jefe\DefaultAJ.aspx" />
+    <Content Include="Admin_Jefe\InformeAJ.aspx" />
+    <Content Include="Admin_Jefe\InicioAJ.aspx" />
+    <Content Include="Admin_Jefe\Menu.html" />
+    <Content Include="Admin_Jefe\Solicitudes.aspx" />
     <Content Include="Comprador\Comprador.css" />
     <Content Include="Comprador\Configuraciones.aspx" />
     <Content Include="Comprador\Default.aspx" />
@@ -102,19 +108,33 @@
     <Compile Include="Administrador\menuAdminaspx.aspx.designer.cs">
       <DependentUpon>menuAdminaspx.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_financiero\admin_finan.aspx.cs">
-      <DependentUpon>admin_finan.aspx</DependentUpon>
+    <Compile Include="Admin_Jefe\DefaultAJ.aspx.cs">
+      <DependentUpon>DefaultAJ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_financiero\admin_finan.aspx.designer.cs">
-      <DependentUpon>admin_finan.aspx</DependentUpon>
+    <Compile Include="Admin_Jefe\DefaultAJ.aspx.designer.cs">
+      <DependentUpon>DefaultAJ.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Jefe\AdministradorJefe.aspx.cs">
-      <DependentUpon>AdministradorJefe.aspx</DependentUpon>
+    <Compile Include="Admin_Jefe\InformeAJ.aspx.cs">
+      <DependentUpon>InformeAJ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_Jefe\AdministradorJefe.aspx.designer.cs">
-      <DependentUpon>AdministradorJefe.aspx</DependentUpon>
+    <Compile Include="Admin_Jefe\InformeAJ.aspx.designer.cs">
+      <DependentUpon>InformeAJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Jefe\InicioAJ.aspx.cs">
+      <DependentUpon>InicioAJ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Jefe\InicioAJ.aspx.designer.cs">
+      <DependentUpon>InicioAJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Jefe\Solicitudes.aspx.cs">
+      <DependentUpon>Solicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Jefe\Solicitudes.aspx.designer.cs">
+      <DependentUpon>Solicitudes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Comprador\Configuraciones.aspx.cs">
       <DependentUpon>Configuraciones.aspx</DependentUpon>
