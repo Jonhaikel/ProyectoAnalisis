@@ -5,7 +5,7 @@
     border-radius: 6px;
     box-shadow: 0 5px 10px;
     margin-left: 8%;
-    align-content:center;
+    align-content: center;
 }
 
     .solis .Contenido {
@@ -14,11 +14,11 @@
         justify-content: space-between;
     }
 
-        #solis .Contenido .izquierdo {
-            width: 25%;
-            height: 100%;
-            position: relative;
-        }
+#solis .Contenido .izquierdo {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
 
 .Contenido .izquierdo::before {
     content: '';
@@ -30,4 +30,3 @@
     transform: translateY(-50%);
     background: #42dca3;
 }
-
