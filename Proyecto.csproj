@@ -70,7 +70,13 @@
   <ItemGroup>
     <Content Include="Administrador\Admin.aspx" />
     <Content Include="Administrador\menuAdminaspx.aspx" />
-    <Content Include="Admin_financiero\admin_finan.aspx" />
+    <Content Include="Imagenes\1601395339_032743800.png" />
+    <Content Include="Admin_financiero\Admin_AF.css" />
+    <Content Include="Admin_financiero\DefaultAF.aspx" />
+    <Content Include="Admin_financiero\MenuAF.html" />
+    <Content Include="Admin_financiero\InformesAF.aspx" />
+    <Content Include="Admin_financiero\InicioAF.aspx" />
+    <Content Include="Admin_financiero\SolicitudesAF.aspx" />
     <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
     <Content Include="Admin_Jefe\Admin_jefe.css" />
     <Content Include="Admin_Jefe\DefaultAJ.aspx" />
@@ -107,6 +113,34 @@
     </Compile>
     <Compile Include="Administrador\menuAdminaspx.aspx.designer.cs">
       <DependentUpon>menuAdminaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_financiero\DefaultAF.aspx.cs">
+      <DependentUpon>DefaultAF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_financiero\DefaultAF.aspx.designer.cs">
+      <DependentUpon>DefaultAF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_financiero\InformesAF.aspx.cs">
+      <DependentUpon>InformesAF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_financiero\InformesAF.aspx.designer.cs">
+      <DependentUpon>InformesAF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_financiero\InicioAF.aspx.cs">
+      <DependentUpon>InicioAF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_financiero\InicioAF.aspx.designer.cs">
+      <DependentUpon>InicioAF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_financiero\SolicitudesAF.aspx.cs">
+      <DependentUpon>SolicitudesAF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_financiero\SolicitudesAF.aspx.designer.cs">
+      <DependentUpon>SolicitudesAF.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Jefe\DefaultAJ.aspx.cs">
       <DependentUpon>DefaultAJ.aspx</DependentUpon>
@@ -188,6 +222,7 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

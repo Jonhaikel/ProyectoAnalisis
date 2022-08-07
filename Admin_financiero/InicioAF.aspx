@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin_finan.aspx.cs" Inherits="Proyecto.Admin_financiero.admin_finan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioAF.aspx.cs" Inherits="Proyecto.Admin_financiero.InicioAF" %>
 
 <!DOCTYPE html>
 
@@ -8,20 +8,18 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            text-align: left;
             font-size: xx-large;
-        }
-        .auto-style7 {
             text-align: center;
         }
     </style>
 </head>
-<body bgcolor="lightblue">
+<body>
     <form id="form1" runat="server">
-        <div class="auto-style1">
-            <div class="auto-style7">
-            <strong>Administrador financiero</strong></div>
-        </div>
+    <p class="auto-style1">
+        <strong> <marquee> Inicio - sistema de requisiciones</marquee> </strong></p>
+
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/1601395339_032743800.png" Width="903px" />
     </form>
+
 </body>
 </html>
