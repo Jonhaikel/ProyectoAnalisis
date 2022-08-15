@@ -136,6 +136,9 @@
 
             <asp:Button ID="Button2" runat="server" Text="Aceptar" Width="100px" BackColor="#6699FF" BorderColor="Black" BorderStyle="Groove" />
 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
         </div>
     </form>
 </body>
