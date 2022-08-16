@@ -68,8 +68,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\admi.css" />
     <Content Include="Administrador\Admin.aspx" />
+    <Content Include="Administrador\Default.aspx" />
+    <Content Include="Administrador\Empleados.aspx" />
+    <Content Include="Administrador\Inicio.aspx" />
+    <Content Include="Administrador\Menu.html" />
     <Content Include="Administrador\menuAdminaspx.aspx" />
+    <Content Include="Administrador\Registrar.aspx" />
+    <Content Include="Administrador\Solicitudes.aspx" />
     <Content Include="Imagenes\1601395339_032743800.png" />
     <Content Include="Admin_financiero\Admin_AF.css" />
     <Content Include="Admin_financiero\DefaultAF.aspx" />
@@ -77,7 +84,6 @@
     <Content Include="Admin_financiero\InformesAF.aspx" />
     <Content Include="Admin_financiero\InicioAF.aspx" />
     <Content Include="Admin_financiero\SolicitudesAF.aspx" />
-    <Content Include="Admin_Jefe\AdministradorJefe.aspx" />
     <Content Include="Admin_Jefe\Admin_jefe.css" />
     <Content Include="Admin_Jefe\DefaultAJ.aspx" />
     <Content Include="Admin_Jefe\InformeAJ.aspx" />
@@ -107,12 +113,47 @@
     <Compile Include="Administrador\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administrador\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Empleados.aspx.cs">
+      <DependentUpon>Empleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Empleados.aspx.designer.cs">
+      <DependentUpon>Empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\menuAdminaspx.aspx.cs">
       <DependentUpon>menuAdminaspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administrador\menuAdminaspx.aspx.designer.cs">
       <DependentUpon>menuAdminaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Solicitudes.aspx.cs">
+      <DependentUpon>Solicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Solicitudes.aspx.designer.cs">
+      <DependentUpon>Solicitudes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_financiero\DefaultAF.aspx.cs">
       <DependentUpon>DefaultAF.aspx</DependentUpon>
