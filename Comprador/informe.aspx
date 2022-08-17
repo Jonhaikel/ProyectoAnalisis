@@ -16,13 +16,22 @@
 <body>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     <form class="solis" runat="server">
+        <asp:Label ID="txtCedulaUsu" runat="server" Text="."></asp:Label>
+        <br />
+        <br>
+        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <br>
+        <br>
+        <asp:Label ID="Label1" runat="server" Text="Selecione el estado para filtrar"></asp:Label>
+        <br>
+        <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
+            <asp:ListItem>Todos</asp:ListItem>
+            <asp:ListItem>Pendiente</asp:ListItem>
+            <asp:ListItem>Aprobado</asp:ListItem>
+            <asp:ListItem>Rechazado</asp:ListItem>
+        </asp:DropDownList>
+        <br>
         <div>
             <h1 class="auto-style1">Informe de solicitudes</h1>
         </div>

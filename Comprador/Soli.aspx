@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="solicitud.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -17,7 +18,38 @@
         .auto-style3 {
             background-color: #66FF99;
         }
+        .auto-style4 {
+            margin-left: 17px;
+        }
     </style>
+
+    <script>
+
+        function alertme() {
+            swal.fire(
+                'Ingresado Correctamente',
+                '',
+                'success'
+            )
+        }
+
+        function alertme2() {
+            swal.fire(
+                'Ah ocurrido un error',
+                '',
+                'error'
+            )
+        }
+
+        function alertme3() {
+            swal.fire(
+                'No se ha podido registrar el pedido',
+                '',
+                'warning'
+            )
+        }
+
+    </script>
 </head>
 <body>
         <br>
@@ -32,7 +64,10 @@
         <h1 class="auto-style1">Solicitud de requisicion</h1>
         <hr />
         <p>
-            <strong>Llenar debidamente los campos solicitados</strong></p>
+            <strong>Llenar debidamente los campos solicitados&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="txtCedulaUsu" runat="server" Text="."></asp:Label>
+&nbsp;<asp:Label ID="lblMensaje" runat="server" Text="."></asp:Label>
+            </strong></p>
         <hr />
         <div>
             <strong>
@@ -43,7 +78,10 @@
                             <asp:Label ID="Label1" runat="server" Text="Nombre de articulo:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" Width="301px"></asp:TextBox>
+                            <asp:TextBox ID="txtNombreArt" runat="server" Width="301px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="Label4" runat="server" Text="Cantidad:"></asp:Label>
+                            <asp:TextBox ID="txtCantidad" runat="server" CssClass="auto-style4" Height="21px" Width="117px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -51,7 +89,7 @@
                             <asp:Label ID="Label2" runat="server" Text="Precio:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox2" runat="server" Width="300px"></asp:TextBox>
+                            <asp:TextBox ID="txtPrecio" runat="server" Width="300px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -59,7 +97,9 @@
                             <asp:Label ID="Label3" runat="server" Text="Descripcion:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox3" runat="server" Height="108px" TextMode="MultiLine" Width="403px"></asp:TextBox>
+                            <asp:TextBox ID="txtDescripcion" runat="server" Height="108px" TextMode="MultiLine" Width="403px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="btnGuardar" runat="server" OnClick="btnGuardar_Click1" Text="Guardar" />
                         </td>
                     </tr>
                 </table>

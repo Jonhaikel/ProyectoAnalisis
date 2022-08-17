@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Windows;
-//using Negocio;
+using Negocio;
 namespace Proyecto.Inicio
 {
     public partial class Login : System.Web.UI.Page
@@ -27,6 +27,7 @@ namespace Proyecto.Inicio
             login(this.txtUsuario.Text, this.txtClave.Text);
             Label1.Text = calculo1.ToString();
 
+           
         }
 
         private void MensajeOK(string Mensaje)
@@ -37,8 +38,17 @@ namespace Proyecto.Inicio
         private void login(string Usuario, string Clave)
         {
 
-            
-                cn.Open();
+            HttpCookie cookieUsuario;
+            cookieUsuario = new HttpCookie("cookieUsuario");
+
+            //3. La expiracion de la cookie
+            cookieUsuario.Expires = DateTime.Today.AddDays(10);
+
+
+            //4. Escribirla
+            Response.Cookies.Add(cookieUsuario);
+
+            cn.Open();
                 SqlCommand cmd = new SqlCommand("select Cedula,IdRol from tbl_Usuario where Cedula = @usuario and (select convert(varchar,DECRYPTBYPASSPHRASE('SHA2_256',Clave)) from tbl_Usuario where Cedula = @usuario) = @pass and Estado = 1", cn);
                 string usu = cmd.Parameters.AddWithValue("usuario", Usuario).ToString();
                 cmd.Parameters.AddWithValue("pass", Clave);
@@ -66,26 +76,47 @@ namespace Proyecto.Inicio
                     if (dt.Rows.Count == 1 && calculo1 <= 2)
                     {
                         
-                        if (dt.Rows[0][1].ToString() == "1")
+                        if (dt.Rows[0][1].ToString() == "1") 
                         {
+                        string x1;
+                        x1 = dt.Rows[0][0].ToString();
+                       
 
-                            Response.Redirect("/Admin_Jefe/AdministradorJefe.aspx");
-                            
+                        cookieUsuario["CedulaUsu"] =x1;
+
+                        Response.Redirect("/Comprador/menu.html");
+
+
                     }
                         if (dt.Rows[0][1].ToString() == "2")
-                        {
-                            
+                        {   
+                        
+                        string x1;
+                        x1 = dt.Rows[0][0].ToString();
 
-                        }
+                        cookieUsuario["CedulaUsu"] = x1;
+
+                        Response.Redirect("/Admin_Jefe/menu.html");
+
+                    }
                         if (dt.Rows[0][1].ToString() == "3")
                         {
-                            
-                        }
+                            Response.Redirect("/Admin_Financiero/menu.html");
+                    }
                         if (dt.Rows[0][1].ToString() == "4")
                         {
-                            
-                        }
+                            Response.Redirect("/Admin_Financiero/menu.html");
                     }
+
+                        if (dt.Rows[0][1].ToString() == "5")
+                            {
+                            Response.Redirect("/Admin_Financiero/menu.html");
+                        }
+                        if (dt.Rows[0][1].ToString() == "5")
+                        {
+                            Response.Redirect("/Admin_Financiero/menu.html");
+                        }
+                }
                     else
                     {
                      ClientScript.RegisterStartupScript(this.GetType(), "alert", "alertme()", true);
@@ -103,7 +134,7 @@ namespace Proyecto.Inicio
                         try
                         {
                             string Rpta = "";
-                            //Rpta = NUsuario.ActualizarEstadoU(txtUsuario.Text);
+                            Rpta = NUsuario.ActualizarEstadoU(txtUsuario.Text);
                             if (Rpta.Equals("OK"))
                             {
                                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alertme2()", true);

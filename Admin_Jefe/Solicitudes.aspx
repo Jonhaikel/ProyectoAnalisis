@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Admin_jefe.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -41,7 +42,43 @@
         .auto-style12 {
             text-align: right;
         }
+        .auto-style13 {
+            width: 100%;
+        }
+        .auto-style14 {
+            margin-left: 49px;
+        }
         </style>
+
+     <script>
+
+        function SolicitudAct() {
+            swal.fire(
+                'Se ha actualizado el estado de la solicitud',
+                '',
+                'success'
+            )
+        }
+
+        function Error() {
+            swal.fire(
+                'Ah ocurrido un error',
+                '',
+                'error'
+            )
+        }
+
+        function alertme3() {
+            swal.fire(
+                'No se ha podido registrar el pedido',
+                '',
+                'warning'
+            )
+        }
+
+     </script>
+
+
 </head>
 <body bgcolor="#73e8ff">
         <br>
@@ -52,25 +89,30 @@
         <h1 class="auto-style1">Solicitudes de requisicion</h1>
         <hr />
         <p>
-            <strong>Consulte la solicitud que necesita </strong></p>
+            <strong>Consulte la solicitud que necesita&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="txtCedulaUsu" runat="server" Text="Label"></asp:Label>
+            </strong></p>
         <p>
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style4"><strong>ID:
-                        <asp:TextBox ID="TextBox4" runat="server" Width="135px"></asp:TextBox>
+                        <asp:TextBox ID="txtIdBuscar" runat="server" Width="144px" AutoPostBack="True" OnTextChanged="txtIdBuscar_TextChanged"></asp:TextBox>
                         </strong></td>
                     <td class="auto-style5"><strong>Nombre:
-                        <asp:TextBox ID="TextBox5" runat="server" Width="222px"></asp:TextBox>
+                        <asp:TextBox ID="txtNombreBuscar" runat="server" AutoPostBack="True" OnTextChanged="txtNombreBuscar_TextChanged"></asp:TextBox>
                         </strong></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Buscar" Width="102px" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="102px" OnClick="btnBuscar_Click" />
                     </td>
                 </tr>
             </table>
         </p>
         <hr />
         <div class="auto-style1">
-            <strong>Solicitudes</strong><hr />
+            <strong>Solicitudes
+            </strong><hr />
         </div>
         <div>
 
@@ -84,6 +126,13 @@
                 <SortedAscendingHeaderStyle BackColor="#594B9C" />
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#33276A" />
+                <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chkSelect" runat="server" AutoPostBack="True" OnCheckedChanged="chkSelect_CheckedChanged" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
             </asp:GridView>
 
         </div>
@@ -94,33 +143,39 @@
 
         <div>
 
-            <table style="width:100%;">
+            <table class="auto-style13">
                 <tr>
                     <td class="auto-style7"><strong>ID:</strong></td>
                     <td>
-                        <asp:TextBox ID="TextBox6" runat="server" CssClass="auto-style9" Enabled="False" Width="212px"></asp:TextBox>
+                        <asp:TextBox ID="txtIdRequi" runat="server" CssClass="auto-style9" Enabled="False" Width="212px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style7"><strong>Articulo:</strong></td>
                     <td>
-                        <asp:TextBox ID="TextBox7" runat="server" CssClass="auto-style9" Enabled="False" Width="213px"></asp:TextBox>
+                        <asp:TextBox ID="txtArticulo" runat="server" CssClass="auto-style9" Enabled="False" Width="213px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style10"><strong>Precio</strong></td>
                     <td class="auto-style11">
-                        <asp:TextBox ID="TextBox8" runat="server" CssClass="auto-style9" Enabled="False" Width="212px"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecioA" runat="server" CssClass="auto-style9" Enabled="False" Width="212px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style8"><strong>Estado:</strong></td>
                     <td class="auto-style6">
-                        <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:DropDownList ID="ddlEstado" runat="server">
                             <asp:ListItem>Aprobado</asp:ListItem>
                             <asp:ListItem>Rechazado</asp:ListItem>
                             <asp:ListItem>Pendiente</asp:ListItem>
                         </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style8"><strong>Descripcion</strong></td>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="txtDescripcion" runat="server" Height="63px" TextMode="MultiLine" Width="250px"></asp:TextBox>
                     </td>
                 </tr>
             </table>
@@ -128,7 +183,7 @@
         </div>
         <div class="auto-style12">
 
-            <asp:Button ID="Button2" runat="server" Text="Aceptar" Width="100px" />
+            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" Width="100px" OnClick="btnAceptar_Click" />
 
         </div>
     </form>
