@@ -30,7 +30,7 @@
                         <asp:TextBox ID="TextBox5" runat="server" Width="222px"></asp:TextBox>
                         </strong></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Buscar" Width="102px" />
+                        <asp:Button ID="Button1" runat="server" Text="Buscar" Width="102px" OnClick="Button1_Click" />
                     </td>
                 </tr>
             </table>

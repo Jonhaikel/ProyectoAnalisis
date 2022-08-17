@@ -17,6 +17,7 @@
     <form id="form1" runat="server">
         <div class="auto-style1">
         </div>
+         <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/apro.jpg" Width="903px" />
     </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Proyecto.Administrador.Inicio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Inicio.aspx.cs" Inherits="Proyecto.Comprador.Inicio" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/admi.jpg" Width="1050px" />
+         <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/compra.jpg" Width="1000px" />
     </form>
 </body>
 </html>

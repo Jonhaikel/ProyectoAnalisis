@@ -21,10 +21,9 @@
         <asp:TreeView ID="TreeView1" runat="server" Height="184px" ImageSet="Contacts" NodeIndent="10" Width="117px">
             <HoverNodeStyle Font-Underline="False" />
             <Nodes>
-                <asp:TreeNode Target="Contenido" Text="Inicio" Value="Inicio"></asp:TreeNode>
+                <asp:TreeNode Target="Contenido" Text="Inicio" Value="Inicio" NavigateUrl="~/Comprador/Inicio.aspx"></asp:TreeNode>
                 <asp:TreeNode NavigateUrl="~/Comprador/Soli.aspx" Target="Contenido" Text="Solicitud" Value="Solicitud"></asp:TreeNode>
                 <asp:TreeNode NavigateUrl="~/Comprador/informe.aspx" Target="Contenido" Text="Informe" Value="Informe"></asp:TreeNode>
-                <asp:TreeNode NavigateUrl="~/Comprador/Configuraciones.aspx" Target="Contenido" Text="Configuracion" Value="Configuracion"></asp:TreeNode>
             </Nodes>
             <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
             <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
