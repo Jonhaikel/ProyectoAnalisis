@@ -23,13 +23,13 @@ namespace Entidad
             get;
             set;
         }
-        public int Telefono
+        public string Telefono
         {
             get;
             set;
         }
 
-        public int Direccion
+        public string Direccion
         {
             get;
             set;
@@ -39,7 +39,7 @@ namespace Entidad
             get;
             set;
         }
-        public string IdRol
+        public int IdRol
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace Entidad
             get;
             set;
         }
-        public string Estado
+        public int Estado
         {
             get;
             set;

@@ -45,7 +45,7 @@ namespace Negocio
 
         }
 
-        /*Metodo para aprobadores actualicen las solicitudes*/
+        /*Metodo para aprobadores jefe actualicen las solicitudes*/
         public static string ActualizarRequisicionAproJefe(string CedulaUsu, int IdRequisicion, string Descripcion, string Estado)
         {
             DRequisicion Datos = new DRequisicion();
@@ -65,6 +65,52 @@ namespace Negocio
             return Datos.ConsultarRequisicionesAproJefe(Cedula, Valor);
 
         }
+
+        /*Listar Requisiciones Aprobador Financiero*/
+        public static DataTable ListarRequisicionesAproFina(string Cedula)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.ListarRequisicionesAproFina(Cedula);
+
+        }
+
+        /*Para que los aprobadores Finacieros actualicen la requisicion*/
+        public static string ActualizarRequisicionAproFina(string CedulaUsu, int IdRequisicion, string Descripcion, string Estado)
+        {
+            DRequisicion Datos = new DRequisicion();
+
+            Requisicion obj = new Requisicion();
+            obj.Cedula = CedulaUsu;
+            obj.IdRequisicion = IdRequisicion;
+            obj.Descripcion = Descripcion;
+            obj.Estado = Estado;
+            return Datos.ActualizarRequisicionAproFina(obj);
+        }
+
+        /*Buscar requisicion de aprobador financiero por nombre de solictante*/
+        public static DataTable BuscarRequisicionesAproFinaNombre(string Cedula, string Valor)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.BuscarRequisicionesAproFinaNombre(Cedula, Valor);
+
+        }
+
+        /*Buscar Requisicion de aprobador Financiero por Id de requisicion*/
+        public static DataTable BusquedaRequisicionesAproFinaId(string Cedula, string IdRequisicion)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.BuscarRequisicionesAproFinaId(Cedula, IdRequisicion);
+
+        }
+
+        /*Consultas solicitudes aprobadas, rechazadas y pendientes*/
+        public static DataTable ConsultarRequisicionesAproFina(string Cedula, string Valor)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.ConsultarRequisicionesAproFina(Cedula, Valor);
+
+        }
+
 
     }
 

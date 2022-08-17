@@ -101,18 +101,32 @@ namespace Proyecto.Inicio
                     }
                         if (dt.Rows[0][1].ToString() == "3")
                         {
-                            Response.Redirect("/Admin_Financiero/menu.html");
+                        string x1;
+                        x1 = dt.Rows[0][0].ToString();
+
+                        cookieUsuario["CedulaUsu"] = x1;
+
+                        Response.Redirect("/Admin_Financiero/MenuAF.html");
                     }
                         if (dt.Rows[0][1].ToString() == "4")
                         {
-                            Response.Redirect("/Admin_Financiero/menu.html");
+                        string x1;
+                        x1 = dt.Rows[0][0].ToString();
+
+                        cookieUsuario["CedulaUsu"] = x1;
+                        Response.Redirect("/Admin_Financiero/MenuAF.html");
                     }
 
                         if (dt.Rows[0][1].ToString() == "5")
                             {
-                            Response.Redirect("/Admin_Financiero/menu.html");
+                        string x1;
+                        x1 = dt.Rows[0][0].ToString();
+
+                        cookieUsuario["CedulaUsu"] = x1;
+                        Response.Redirect("/Admin_Financiero/MenuAF.html");
                         }
-                        if (dt.Rows[0][1].ToString() == "5")
+
+                        if (dt.Rows[0][1].ToString() == "6")
                         {
                             Response.Redirect("/Admin_Financiero/menu.html");
                         }

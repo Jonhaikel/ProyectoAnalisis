@@ -7,6 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="admi.css" rel="stylesheet" />
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 0px;
+        }
+    </style>
 </head>
 <body bgcolor ="#1de9b6">
     <form class="solis" runat="server">
@@ -31,6 +36,7 @@
             </table>
         </p>
         </div>
+        
         <hr />
         <asp:GridView ID="GridView1" runat="server" CellPadding="3" Height="190px" Width="644px" GridLines="Horizontal" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px">
             <AlternatingRowStyle BackColor="#F7F7F7" />
@@ -43,6 +49,22 @@
             <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
             <SortedDescendingCellStyle BackColor="#D8D8F0" />
             <SortedDescendingHeaderStyle BackColor="#3E3277" />
+            <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chkSelect" runat="server" AutoPostBack="True" OnCheckedChanged="chkSelect_CheckedChanged" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
         </asp:GridView>
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Estado:"></asp:Label>
+&nbsp;&nbsp;
+        <asp:TextBox ID="txtEstado" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txtIdUsario" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnCambiar" runat="server" Text="Cambiar" CssClass="auto-style1" OnClick="btnCambiar_Click" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </form>
 </body></html>
