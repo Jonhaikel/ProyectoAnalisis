@@ -69,6 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\admi.css" />
+    <Content Include="Comprador\Inicio.aspx" />
+    <Content Include="Imagenes\apro.jpg" />
+    <Content Include="Imagenes\compra.jpg" />
+    <Content Include="Imagenes\admi.jpg" />
     <Content Include="Administrador\Admin.aspx" />
     <Content Include="Administrador\Default.aspx" />
     <Content Include="Administrador\Empleados.aspx" />
@@ -231,6 +235,13 @@
     </Compile>
     <Compile Include="Comprador\informe.aspx.designer.cs">
       <DependentUpon>informe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comprador\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprador\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Comprador\Soli.aspx.cs">
       <DependentUpon>Soli.aspx</DependentUpon>

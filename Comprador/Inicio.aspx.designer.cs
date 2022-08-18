@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto.Admin_Jefe
+namespace Proyecto.Comprador
 {
 
 
-    public partial class InicioAJ
+    public partial class Inicio
     {
 
         /// <summary>
