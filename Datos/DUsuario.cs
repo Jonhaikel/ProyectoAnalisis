@@ -301,5 +301,62 @@ namespace Datos
 
         }
 
+        /*Cambiar Estado Del usuario*/
+        public string ActualizarEstadoUsuario(Usuario Obj)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("ActualizarEstado", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = Obj.Cedula;
+                Comando.Parameters.Add("@Estado", SqlDbType.Bit).Value = Obj.Estado;
+                SqlCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo actualizar el registro";
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
+
+        }
+
+        /*Buscar Empleados*/
+        public DataTable BuscarEmpleado(string Cedula)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("BuscarEmpleado", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = Cedula;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+        }
+
+       
+
     }
 }

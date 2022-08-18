@@ -97,5 +97,25 @@ namespace Negocio
             return Datos.ListarUsuarios();
 
         }
+
+        public static string ActualizarEstadoUsuario(string Cedula, int Estado)
+        {
+            DUsuario Datos = new DUsuario();
+
+            Usuario obj = new Usuario();
+            obj.Cedula = Cedula;
+            obj.Estado = Estado;
+            return Datos.ActualizarEstadoUsuario(obj);
+        }
+
+        /*Busacr empleado*/
+        public static DataTable BuscarEmpleado(string Cedula)
+        {
+            DUsuario Datos = new DUsuario();
+            return Datos.BuscarEmpleado(Cedula);
+
+        }
+
+       
     }
 }

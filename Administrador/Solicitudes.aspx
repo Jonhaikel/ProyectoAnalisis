@@ -18,15 +18,22 @@
              <p>
             <table style="width:100%;">
                 <tr>
-                    <td class="auto-style4"><strong>ID:
-                        <asp:TextBox ID="TextBox4" runat="server" Width="135px"></asp:TextBox>
+                    <td class="auto-style4"><strong>Financiero:
+                        <asp:TextBox ID="txtNombreAproFina" runat="server" Width="135px" AutoPostBack="True" OnTextChanged="txtCedulaApro_TextChanged"></asp:TextBox>
                         </strong></td>
-                    <td class="auto-style5"><strong>Nombre:
-                        <asp:TextBox ID="TextBox5" runat="server" Width="222px"></asp:TextBox>
+                    <td class="auto-style5"><strong>Jefe:
+                        <asp:TextBox ID="txtNombreApro" runat="server" Width="222px" AutoPostBack="True" OnTextChanged="txtNombreApro_TextChanged"></asp:TextBox>
                         </strong></td>
                     <td>
                         <asp:Button ID="Button1" runat="server" Text="Buscar" Width="102px" />
                     </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4"><strong>Cliente:</strong><asp:TextBox ID="txtCedulaCli" runat="server" AutoPostBack="True" OnTextChanged="txtCedulaCli_TextChanged"></asp:TextBox>
+                    </td>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
             </table>
         </p>

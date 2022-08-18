@@ -111,6 +111,25 @@ namespace Negocio
 
         }
 
+        /*Lisatr general*/
+        public static DataTable ListarRequisicionesGeneral(string Nombre)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.ListarRequisicionesGeneral(Nombre);
+        }
+
+        /*Lisatr general*/
+        public static DataTable ListarRequisicionesGeneralClie(string Clie)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.ListarRequisicionesGeneralClie(Clie);
+        }
+
+        public static DataTable ListarRequisicionesGeneralFina(string Nombre)
+        {
+            DRequisicion Datos = new DRequisicion();
+            return Datos.ListarRequisicionesGeneralFina(Nombre);
+        }
 
     }
 

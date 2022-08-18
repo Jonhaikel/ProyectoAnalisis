@@ -6,12 +6,44 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="admi.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.24/dist/sweetalert2.all.min.js"></script>
     <title></title>
     <style type="text/css">
         .auto-style1 {
             margin-left: 0px;
         }
+        .auto-style2 {
+            width: 275px;
+        }
     </style>
+
+       <script>
+
+        function InsertadoCo() {
+            swal.fire(
+                'Se ha actualizado correctamente',
+                '',
+                'success'
+            )
+        }
+
+        function Error() {
+            swal.fire(
+                'Ah ocurrido un error',
+                '',
+                'error'
+            )
+        }
+
+        function alertme3() {
+            swal.fire(
+                'No se ha podido registrar el pedido',
+                '',
+                'warning'
+            )
+        }
+
+       </script>
 </head>
 <body bgcolor ="#1de9b6">
     <form class="solis" runat="server">
@@ -23,16 +55,17 @@
              <p>
             <table style="width:100%;">
                 <tr>
-                    <td class="auto-style4"><strong>ID:
-                        <asp:TextBox ID="TextBox4" runat="server" Width="135px"></asp:TextBox>
+                    <td class="auto-style2"><strong>Cedula:
+                        <asp:TextBox ID="txtCedula" runat="server" Width="135px"></asp:TextBox>
                         </strong></td>
-                    <td class="auto-style5"><strong>Nombre:
-                        <asp:TextBox ID="TextBox5" runat="server" Width="222px"></asp:TextBox>
-                        </strong></td>
+                    <td class="auto-style5">&nbsp;</td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Buscar" Width="102px" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="102px" OnClick="btnBuscar_Click" />
                     </td>
                 </tr>
+                
+                
+                
             </table>
         </p>
         </div>

@@ -22,12 +22,41 @@ namespace Proyecto.Administrador
                 // MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+        private void BuscarEmpleado()
+        {
+
+            try
+            {
+                GridView1.DataSource = NUsuario.BuscarEmpleado(txtCedula.Text);
+                GridView1.DataBind();
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) {
                 this.ListarUsuarios();
             }
             
+        }
+
+
+        protected void btnCambiar_Click(object sender, EventArgs e)
+        {
+            string Rpta = "";
+            Rpta = NUsuario.ActualizarEstadoUsuario(txtIdUsario.Text, int.Parse(txtEstado.Text));
+            if (Rpta.Equals("OK"))
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "InsertadoCo()", true);
+                ListarUsuarios();
+                txtIdUsario.Text = "";
+                txtEstado.Text = "";
+
+            }
         }
 
         protected void chkSelect_CheckedChanged(object sender, EventArgs e)
@@ -38,9 +67,8 @@ namespace Proyecto.Administrador
             if (chk.Checked)
             {
 
-                txtEstado.Text = GridView1.Rows[fila].Cells[9].Text;
                 txtIdUsario.Text = GridView1.Rows[fila].Cells[1].Text;
-
+                txtEstado.Text = GridView1.Rows[fila].Cells[9].Text;
             }
             else
             {
@@ -49,9 +77,9 @@ namespace Proyecto.Administrador
             }
         }
 
-        protected void btnCambiar_Click(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            this.BuscarEmpleado();
         }
     }
 }
